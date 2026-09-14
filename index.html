@@ -7,58 +7,133 @@
     <title>Serhat Cetin Apps</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            max-width: 850px;
-            margin: 60px auto;
-            padding: 20px;
-            line-height: 1.6;
+            margin: 0;
+            background-color: #f5f7fa;
             color: #222;
-            background-color: #f8f9fb;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
         }
 
         h1 {
-            color: #1565c0;
             text-align: center;
+            color: #1565c0;
+            margin-bottom: 10px;
+            font-size: 38px;
         }
 
         .intro {
+            max-width: 680px;
+            margin: 0 auto 45px auto;
             text-align: center;
-            margin-bottom: 40px;
             color: #555;
+            font-size: 17px;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
         }
 
         .app {
-            margin-top: 20px;
-            padding: 22px;
             background: white;
-            border-radius: 14px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+            border-radius: 18px;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .app:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .app-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .app h2 {
-            margin-top: 0;
+            margin: 0;
             color: #1565c0;
+            font-size: 23px;
+            line-height: 1.25;
+        }
+
+        .app p {
+            margin-bottom: 0;
+            color: #444;
         }
 
         .footer {
-            margin-top: 45px;
+            margin-top: 55px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
             text-align: center;
             color: #555;
+        }
+
+        .footer p {
+            margin: 8px 0;
         }
 
         a {
             color: #1565c0;
             text-decoration: none;
+            font-weight: 600;
         }
 
         a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 750px) {
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 31px;
+            }
+
+            .app-icon {
+                width: 78px;
+                height: 78px;
+                border-radius: 18px;
+            }
+
+            .app h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+<div class="container">
 
     <h1>Serhat Cetin Apps</h1>
 
@@ -68,64 +143,110 @@
     </p>
 
 
-    <!-- US Citizenship App -->
+    <div class="apps-grid">
 
-    <div class="app">
-        <h2>🇺🇸 US Citizenship Prep Master</h2>
+        <!-- Prayer Time App -->
 
-        <p>
-            Prepare for the U.S. naturalization civics test with
-            study questions, practice tests, flash cards,
-            favorites, search, and progress tracking.
-        </p>
+        <div class="app">
+
+            <div class="app-header">
+                <img
+                    src="prayer-time-icon.png"
+                    alt="Muslim Adhan Salah PrayerTimes App Icon"
+                    class="app-icon"
+                >
+
+                <h2>Muslim Adhan Salah PrayerTimes</h2>
+            </div>
+
+            <p>
+                Stay connected with daily prayer times,
+                Adhan notifications, Qibla direction,
+                Quran access, and useful Islamic tools
+                in one easy-to-use app.
+            </p>
+
+        </div>
+
+
+        <!-- US Citizenship App -->
+
+        <div class="app">
+
+            <div class="app-header">
+                <img
+                    src="citizenship-icon.png"
+                    alt="US Citizenship Prep Master App Icon"
+                    class="app-icon"
+                >
+
+                <h2>US Citizenship Prep Master</h2>
+            </div>
+
+            <p>
+                Prepare for the U.S. naturalization civics test
+                with study questions, practice tests, flash cards,
+                favorites, search, and progress tracking.
+            </p>
+
+        </div>
+
+
+        <!-- English Quiz Pro -->
+
+        <div class="app">
+
+            <div class="app-header">
+                <img
+                    src="english-quiz-icon.png"
+                    alt="English Quiz Pro App Icon"
+                    class="app-icon"
+                >
+
+                <h2>English Quiz Pro</h2>
+            </div>
+
+            <p>
+                Improve your English with vocabulary, grammar,
+                spelling, reading, and practice quizzes designed
+                for different learning levels.
+            </p>
+
+        </div>
+
+
+        <!-- Qibla Finder -->
+
+        <div class="app">
+
+            <div class="app-header">
+                <img
+                    src="qibla-icon.png"
+                    alt="Muslim Qibla Finder App Icon"
+                    class="app-icon"
+                >
+
+                <h2>Muslim Qibla Finder</h2>
+            </div>
+
+            <p>
+                Find the Qibla direction using your device
+                and easily determine the direction of the Kaaba
+                for prayer.
+            </p>
+
+        </div>
+
     </div>
 
 
-    <!-- English Quiz Pro -->
-
-    <div class="app">
-        <h2>📚 English Quiz Pro</h2>
-
-        <p>
-            Improve your English with vocabulary, grammar,
-            spelling, reading, and practice quizzes designed
-            for different learning levels.
-        </p>
-    </div>
-
-
-    <!-- Prayer Time App -->
-
-    <div class="app">
-        <h2>🕌 Prayer Time</h2>
-
-        <p>
-            Islamic prayer time application featuring daily
-            prayer schedules, Qibla direction, Quran tools,
-            mosque finder, and prayer notifications.
-        </p>
-    </div>
-
-
-    <!-- Qibla Finder -->
-
-    <div class="app">
-        <h2>🧭 Qibla Finder</h2>
-
-        <p>
-            A simple Qibla direction application designed to
-            help users determine the direction of the Kaaba
-            using their device.
-        </p>
-    </div>
-
-
-    <!-- Contact -->
+    <!-- Footer -->
 
     <div class="footer">
 
         <p>
-            Developer: <strong>Serhat Cetin</strong>
+            Developer:
+            <strong>Serhat Cetin</strong>
         </p>
 
         <p>
@@ -137,7 +258,7 @@
 
         <p>
             <a href="/app-ads.txt">
-                app-ads.txt
+                View app-ads.txt
             </a>
         </p>
 
@@ -146,6 +267,8 @@
         </p>
 
     </div>
+
+</div>
 
 </body>
 </html>
